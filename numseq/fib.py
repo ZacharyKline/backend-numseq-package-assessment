@@ -4,7 +4,9 @@
 
 def fib(n):
     """Return fibonacci sequence of a number"""
-    a, b = 0, 1
-    while b < n:
-        a, b = b, a+b
-    return b
+    if n < 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
